@@ -1,8 +1,9 @@
-import express from "express";
-import dotenv from "dotenv";
-
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+import express from "express";
 import qs from "qs";
+
+import { WorkflowRouter } from "./workflows/router";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ const port = process.env.PORT;
 	app.get("/", (_, res) => {
 		res.send("Express + TypeScript Server");
 	});
+	app.use("/workflow", WorkflowRouter);
 
 	app.listen(port, () => {
 		console.info(`[server]: Server is running at http://localhost:${port}`);
