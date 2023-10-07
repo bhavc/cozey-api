@@ -1,4 +1,5 @@
 import bodyParser from "body-parser";
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import qs from "qs";
@@ -19,6 +20,7 @@ const port = process.env.PORT;
 
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: false }));
+	app.use(cors());
 
 	app.get("/", (_, res) => {
 		res.send("Express + TypeScript Server");
