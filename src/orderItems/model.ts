@@ -92,6 +92,27 @@ export const orderItemsTable: {
 		productName: "Client Gift",
 		price: 25,
 	},
+	{
+		id: 10,
+		orderId: 9,
+		productSetId: 3,
+		productName: "Client Gift",
+		price: 25,
+	},
+	{
+		id: 11,
+		orderId: 10,
+		productSetId: 3,
+		productName: "Client Gift",
+		price: 25,
+	},
+	{
+		id: 12,
+		orderId: 11,
+		productSetId: 3,
+		productName: "Client Gift",
+		price: 25,
+	},
 ];
 
 export class OrderItemsModel {
